@@ -8,7 +8,7 @@
     <link rel="icon" sizes="32x32" href="favicon.png">
     <link rel="preload" href="fonts/ptsans-400.woff2" type="font/woff2" as="font">
     <link rel="preload" href="fonts/ptsans-700.woff2" type="font/woff2" as="font">
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="styles/styles.css">
   </head>
 
   <body>
@@ -41,135 +41,144 @@
             </a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link button" href="#">Хочу сюда!</a>
+            <a class="button" href="#">Хочу сюда!</a>
           </li>
         </ul>
       </nav>
     </header>
     <main class="page-main">
-      <header class="page-main-header header">
-        <h1 class="page-main-title">Гостиницы Седоны</h1>
-        <ul class="header-breadcrumbs">
-          <li class="header-breadcrumbs-item">
-            <a class="breadcrumbs-link" href="index.html">
-              <img class="breadcrums-img" src="images/svg/home.svg" width="13" height="15" alt="Переход на главную страницу">
-            </a>
-          </li>
-          <li class="header-breadcrumbs-item">
-            <a class="breadcrumbs-link" href="#" aria-current="page">Гостиницы</a>
-          </li>
-        </ul>
-      </header>
-      <section class="filter">
-        <h2 class="visually-hidden">Фильтры для выбора гостиницы</h2>
-        <form class="filter-form form" action="https://echo.htmlacademy.ru/" method="post">
-          <fieldset class="form-fieldset">
-            <legend class="form-title">Инфраструктура:</legend>
-            <ul class="form-list">
-              <li class="form-item">
-                <label>
-                  <input class="checkbox" type="checkbox" name="infrastructure" value="pool" checked>
-                  Бассейн
-                </label>
-              </li>
-              <li class="form-item">
-                <label>
-                  <input class="checkbox" type="checkbox" name="infrastructure" value="parking" checked>
-                  Парковка
-                </label>
-              </li>
-              <li class="form-item">
-                <label>
-                  <input class="checkbox" type="checkbox" name="infrastructure" value="wifi">
-                  Wi-Fi
-                </label>
-              </li>
-            </ul>
-          </fieldset>
-          <fieldset class="form-fieldset">
-            <legend class="form-title">Тип жилья:</legend>
-            <ul class="form-list">
-              <li class="form-item">
-                <label>
-                  <input class="radio" type="radio" name="housing" value="hotel" checked>
-                  Гостиница
-                </label>
-              </li>
-              <li class="form-item"><label>
-                  <input class="radio" type="radio" name="housing" value="motel">
-                  Мотель
-                </label>
-              </li>
-              <li class="form-item">
-                <label>
-                  <input class="radio" type="radio" name="housing" value="appartments">
-                  Аппартаменты
-                </label>
-              </li>
-            </ul>
-          </fieldset>
-          <fieldset class="form-fieldset">
-            <legend class="form-title">Стоимость:</legend>
-          </fieldset>
-          <div class="form-buttons-wrapper">
-            <button class="button button-submit" type="submit">Применить</button>
-            <button class="button button-reset" type="reset">Сбросить</button>
-          </div>
-        </form>
+      <div class="filter-wrapper">
+        <header class="page-main-header header">
+          <h1 class="header-title">Гостиницы Седоны</h1>
+          <ul class="header-breadcrumbs">
+            <li class="header-breadcrumbs-item">
+              <a class="breadcrumbs-link" href="index.html">
+                <img class="breadcrums-img" src="images/svg/home.svg" width="13" height="15"
+                  alt="Переход на главную страницу">
+              </a>
+            </li>
+            <li class="header-breadcrumbs-item">
+              <a class="breadcrumbs-link" href="#" aria-current="page">Гостиницы</a>
+            </li>
+          </ul>
+        </header>
+        <section class="filter">
+          <h2 class="visually-hidden">Фильтры для выбора гостиницы</h2>
+          <form class="filter-form form" action="https://echo.htmlacademy.ru/" method="post">
+            <fieldset class="form-fieldset">
+              <legend class="form-title">Инфраструктура:</legend>
+              <ul class="form-list">
+                <li class="form-item">
+                  <label>
+                    <input class="checkbox" type="checkbox" name="infrastructure" value="pool" checked>
+                    Бассейн
+                  </label>
+                </li>
+                <li class="form-item">
+                  <label>
+                    <input class="checkbox" type="checkbox" name="infrastructure" value="parking" checked>
+                    Парковка
+                  </label>
+                </li>
+                <li class="form-item">
+                  <label>
+                    <input class="checkbox" type="checkbox" name="infrastructure" value="wifi">
+                    Wi-Fi
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="form-fieldset">
+              <legend class="form-title">Тип жилья:</legend>
+              <ul class="form-list">
+                <li class="form-item">
+                  <label>
+                    <input class="radio" type="radio" name="housing" value="hotel" checked>
+                    Гостиница
+                  </label>
+                </li>
+                <li class="form-item"><label>
+                    <input class="radio" type="radio" name="housing" value="motel">
+                    Мотель
+                  </label>
+                </li>
+                <li class="form-item">
+                  <label>
+                    <input class="radio" type="radio" name="housing" value="appartments">
+                    Аппартаменты
+                  </label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="form-fieldset">
+              <legend class="form-title">Стоимость:</legend>
+            </fieldset>
+            <div class="form-buttons-wrapper">
+              <button class="button button-submit" type="submit">Применить</button>
+              <button class="button button-reset" type="reset">Сбросить</button>
+            </div>
+          </form>
+        </section>
+      </div>
+      <section class="hotels">
+        <h2 class="visually-hidden">Список гостиниц и их сортировка</h2>
         <div class="sorting-wrapper">
-          <p class="sorting-result">Найдено гостиниц: <span class="sorting-result-number">38</span></p>
+          <p class="sorting-result title">Найдено гостиниц: <span class="sorting-result-number">38</span></p>
           <select class="sorting-select" name="sorting" aria-label="Сортировка">
             <option value="cheap">Сначала дешевые</option>
             <option value="expensive">Сначала дорогие</option>
           </select>
-          <a class="sorting-button button-list sorting-button-current" href="catalog.html?view=list">
+          <a class="sorting-button button-list sorting-button-current" href="catalog.html?view=list"
+            title="Показать список карточек">
             <span class="visually-hidden">Показать список карточек</span>
           </a>
-          <a class="sorting-button button-cards" href="catalog.html?view=card">
+          <a class="sorting-button button-cards" href="catalog.html?view=card" title="Показать карточки">
             <span class="visually-hidden">Показать карточки крупно</span>
           </a>
-          <a class="sorting-button button-titles" href="catalog.html?view=tile">
+          <a class="sorting-button button-titles" href="catalog.html?view=tile"
+            title="Показать список названий карточек">
             <span class="visually-hidden">Показать названия карточек</span>
           </a>
         </div>
         <ul class="products-list">
           <li class="product-card">
             <h3 class="product-card-title">Amara Resort & Spa</h3>
-            <img class="product-card-img" src="images/products/hotel-1.jpg" width="300" height="212" alt="Вид из пещеры на ночное небо">
+            <img class="product-card-img" src="images/products/hotel-1.jpg" width="300" height="212"
+              alt="Вид из пещеры на ночное небо">
             <dl class="product-card-table">
               <dt>Гостиница</dt>
               <dd>От 4000 ₽</dd>
             </dl>
             <div class="product-card-buttons">
               <a class="button button-more" href="#">Подробнее</a>
-              <button class="button button-tofavourites" type="button">В избранное</button>
+              <button class="button button-favourites" type="button">В избранное</button>
             </div>
             <div class="product-card-rating">
               <svg width="140" height="37" fill="none">
                 <g clip-path="url(#a)">
-                  <path fill="#83B3D3" d="m9 10 2.1 6.5H18l-5.6 4 2.2 6.5L9 23l-5.6 4 2.2-6.5-5.6-4h6.9L9 10Z"/>
+                  <path fill="#83B3D3" d="m9 10 2.1 6.5H18l-5.6 4 2.2 6.5L9 23l-5.6 4 2.2-6.5-5.6-4h6.9L9 10Z" />
                 </g>
                 <g clip-path="url(#b)">
-                  <path fill="#83B3D3" d="m33 10 2.1 6.5H42l-5.6 4 2.2 6.5-5.6-4-5.6 4 2.2-6.5-5.6-4h6.9L33 10Z"/>
+                  <path fill="#83B3D3" d="m33 10 2.1 6.5H42l-5.6 4 2.2 6.5-5.6-4-5.6 4 2.2-6.5-5.6-4h6.9L33 10Z" />
                 </g>
                 <g clip-path="url(#c)">
-                  <path fill="#83B3D3" d="m57 10 2.1 6.5H66l-5.6 4 2.2 6.5-5.6-4-5.6 4 2.2-6.5-5.6-4h6.9L57 10Z"/>
+                  <path fill="#83B3D3" d="m57 10 2.1 6.5H66l-5.6 4 2.2 6.5-5.6-4-5.6 4 2.2-6.5-5.6-4h6.9L57 10Z" />
                 </g>
                 <g clip-path="url(#d)">
-                  <path fill="#83B3D3" d="m81 10 2.1 6.5H90l-5.6 4 2.2 6.5-5.6-4-5.6 4 2.2-6.5-5.6-4h6.9L81 10Z"/>
+                  <path fill="#83B3D3" d="m81 10 2.1 6.5H90l-5.6 4 2.2 6.5-5.6-4-5.6 4 2.2-6.5-5.6-4h6.9L81 10Z" />
                 </g>
                 <defs>
                   <clipPath>
-                    <path fill="#fff" d="M0 10h18v17H0z"/>
+                    <path fill="#fff" d="M0 10h18v17H0z" />
                   </clipPath>
                   <clipPath>
-                    <path fill="#fff" d="M24 10h18v17H24z"/>
+                    <path fill="#fff" d="M24 10h18v17H24z" />
                   </clipPath>
                   <clipPath>
-                    <path fill="#fff" d="M48 10h18v17H48z"/>
+                    <path fill="#fff" d="M48 10h18v17H48z" />
                   </clipPath>
                   <clipPath>
-                    <path fill="#fff" d="M72 10h18v17H72z"/>
+                    <path fill="#fff" d="M72 10h18v17H72z" />
                   </clipPath>
                 </defs>
               </svg>
@@ -188,34 +197,34 @@
             </dl>
             <div class="product-card-buttons">
               <a class="button button-more" href="#">Подробнее</a>
-              <button class="button button-tofavourites" type="button">В избранное</button>
+              <button class="button button-favourites" type="button">В избранное</button>
             </div>
             <div class="product-card-rating">
               <svg width="140" height="37" fill="none">
                 <g clip-path="url(#a)">
-                  <path fill="#83B3D3" d="m9 10 2.1 6.5H18l-5.6 4 2.2 6.5L9 23l-5.6 4 2.2-6.5-5.6-4h6.9L9 10Z"/>
+                  <path fill="#83B3D3" d="m9 10 2.1 6.5H18l-5.6 4 2.2 6.5L9 23l-5.6 4 2.2-6.5-5.6-4h6.9L9 10Z" />
                 </g>
                 <g clip-path="url(#b)">
-                  <path fill="#83B3D3" d="m33 10 2.1 6.5H42l-5.6 4 2.2 6.5-5.6-4-5.6 4 2.2-6.5-5.6-4h6.9L33 10Z"/>
+                  <path fill="#83B3D3" d="m33 10 2.1 6.5H42l-5.6 4 2.2 6.5-5.6-4-5.6 4 2.2-6.5-5.6-4h6.9L33 10Z" />
                 </g>
                 <g clip-path="url(#c)">
-                  <path fill="#83B3D3" d="m57 10 2.1 6.5H66l-5.6 4 2.2 6.5-5.6-4-5.6 4 2.2-6.5-5.6-4h6.9L57 10Z"/>
+                  <path fill="#83B3D3" d="m57 10 2.1 6.5H66l-5.6 4 2.2 6.5-5.6-4-5.6 4 2.2-6.5-5.6-4h6.9L57 10Z" />
                 </g>
                 <g clip-path="url(#d)">
-                  <path fill="#83B3D3" d="m81 10 2.1 6.5H90l-5.6 4 2.2 6.5-5.6-4-5.6 4 2.2-6.5-5.6-4h6.9L81 10Z"/>
+                  <path fill="#83B3D3" d="m81 10 2.1 6.5H90l-5.6 4 2.2 6.5-5.6-4-5.6 4 2.2-6.5-5.6-4h6.9L81 10Z" />
                 </g>
                 <defs>
                   <clipPath>
-                    <path fill="#fff" d="M0 10h18v17H0z"/>
+                    <path fill="#fff" d="M0 10h18v17H0z" />
                   </clipPath>
                   <clipPath>
-                    <path fill="#fff" d="M24 10h18v17H24z"/>
+                    <path fill="#fff" d="M24 10h18v17H24z" />
                   </clipPath>
                   <clipPath>
-                    <path fill="#fff" d="M48 10h18v17H48z"/>
+                    <path fill="#fff" d="M48 10h18v17H48z" />
                   </clipPath>
                   <clipPath>
-                    <path fill="#fff" d="M72 10h18v17H72z"/>
+                    <path fill="#fff" d="M72 10h18v17H72z" />
                   </clipPath>
                 </defs>
               </svg>
@@ -234,28 +243,28 @@
             </dl>
             <div class="product-card-buttons">
               <a class="button button-more" href="#">Подробнее</a>
-              <button class="button button-tofavourites" type="button">В избранное</button>
+              <button class="button button-favourites" type="button">В избранное</button>
             </div>
             <div class="product-card-rating">
               <svg width="140" height="37" fill="none">
                 <g clip-path="url(#a)">
-                  <path fill="#83B3D3" d="m9 10 2.1 6.5H18l-5.6 4 2.2 6.5L9 23l-5.6 4 2.2-6.5-5.6-4h6.9L9 10Z"/>
+                  <path fill="#83B3D3" d="m9 10 2.1 6.5H18l-5.6 4 2.2 6.5L9 23l-5.6 4 2.2-6.5-5.6-4h6.9L9 10Z" />
                 </g>
                 <g clip-path="url(#b)">
-                  <path fill="#83B3D3" d="m33 10 2.1 6.5H42l-5.6 4 2.2 6.5-5.6-4-5.6 4 2.2-6.5-5.6-4h6.9L33 10Z"/>
+                  <path fill="#83B3D3" d="m33 10 2.1 6.5H42l-5.6 4 2.2 6.5-5.6-4-5.6 4 2.2-6.5-5.6-4h6.9L33 10Z" />
                 </g>
                 <g clip-path="url(#c)">
-                  <path fill="#83B3D3" d="m57 10 2.1 6.5H66l-5.6 4 2.2 6.5-5.6-4-5.6 4 2.2-6.5-5.6-4h6.9L57 10Z"/>
+                  <path fill="#83B3D3" d="m57 10 2.1 6.5H66l-5.6 4 2.2 6.5-5.6-4-5.6 4 2.2-6.5-5.6-4h6.9L57 10Z" />
                 </g>
                 <defs>
                   <clipPath>
-                    <path fill="#fff" d="M0 10h18v17H0z"/>
+                    <path fill="#fff" d="M0 10h18v17H0z" />
                   </clipPath>
                   <clipPath>
-                    <path fill="#fff" d="M24 10h18v17H24z"/>
+                    <path fill="#fff" d="M24 10h18v17H24z" />
                   </clipPath>
                   <clipPath>
-                    <path fill="#fff" d="M48 10h18v17H48z"/>
+                    <path fill="#fff" d="M48 10h18v17H48z" />
                   </clipPath>
                 </defs>
               </svg>
@@ -274,22 +283,22 @@
             </dl>
             <div class="product-card-buttons">
               <a class="button button-more" href="#">Подробнее</a>
-              <button class="button button-tofavourites" type="button">В избранное</button>
+              <button class="button button-favourites" type="button">В избранное</button>
             </div>
             <div class="product-card-rating">
               <svg width="140" height="37" fill="none">
                 <g clip-path="url(#a)">
-                  <path fill="#83B3D3" d="m9 10 2.1 6.5H18l-5.6 4 2.2 6.5L9 23l-5.6 4 2.2-6.5-5.6-4h6.9L9 10Z"/>
+                  <path fill="#83B3D3" d="m9 10 2.1 6.5H18l-5.6 4 2.2 6.5L9 23l-5.6 4 2.2-6.5-5.6-4h6.9L9 10Z" />
                 </g>
                 <g clip-path="url(#b)">
-                  <path fill="#83B3D3" d="m33 10 2.1 6.5H42l-5.6 4 2.2 6.5-5.6-4-5.6 4 2.2-6.5-5.6-4h6.9L33 10Z"/>
+                  <path fill="#83B3D3" d="m33 10 2.1 6.5H42l-5.6 4 2.2 6.5-5.6-4-5.6 4 2.2-6.5-5.6-4h6.9L33 10Z" />
                 </g>
                 <defs>
                   <clipPath>
-                    <path fill="#fff" d="M0 10h18v17H0z"/>
+                    <path fill="#fff" d="M0 10h18v17H0z" />
                   </clipPath>
                   <clipPath>
-                    <path fill="#fff" d="M24 10h18v17H24z"/>
+                    <path fill="#fff" d="M24 10h18v17H24z" />
                   </clipPath>
                 </defs>
               </svg>
@@ -301,10 +310,10 @@
         </ul>
 
         <ul class="pagination">
-          <li class="pagination-item">
+          <li class="pagination-item pagination-item-active pagination-item-current">
             <a class="pagination-link">1</a>
           </li>
-          <li class="pagination-item pagination-item-active pagination-item-current">
+          <li class="pagination-item pagination-item-active">
             <a class="pagination-link" href="#">2</a>
           </li>
           <li class="pagination-item pagination-item-active">
@@ -313,7 +322,7 @@
           <li class="pagination-item pagination-item-active">
             <a class="pagination-link" href="#">4</a>
           </li>
-          <li class="pagination-item pagination-item-active">
+          <li class="pagination-item">
             <a class="pagination-link" href="#">5</a>
           </li>
           <li class="pagination-item">
@@ -328,26 +337,27 @@
           <li class="pagination-item">
             <a class="pagination-link" href="#">9</a>
           </li>
-          <li class="pagination-item pagination-item-active">
-            <span class="pagination-link-ellipsis">...</span>
+          <li class="pagination-item pagination-item-active pagination-item-current">
+            <span class="pagination-link">...</span>
           </li>
           <li class="pagination-item pagination-item-active">
             <a class="pagination-link" href="#">10</a>
           </li>
         </ul>
       </section>
+
     </main>
     <footer class="page-footer">
-      <section class="page-footer-subscribe subscribe">
-        <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
-        <p class="subscribe-description">Только полезная информация и никакого спама, честное бойскаутское!</p>
+      <section class="subscribe subscribe-inner">
+        <h2 class="subscribe-title title">Подпишитесь на рассылку</h2>
+        <p class="subscribe-description description">Только полезная информация и никакого спама, честное бойскаутское!</p>
         <form class="subsribe-form" action="https://echo.htmlacademy.ru/" method="post">
           <p class="subscribe-form-wrapper">
             <label class="visually-hidden" for="email-field">Введите адрес Вашей электронной почты</label>
             <input class="subscribe-form-input" id="email-field" type="email" name="email" placeholder="Ваш e-mail"
               required>
           </p>
-          <button class="subscribe-form-button button" type="submit">Подписаться</button>
+          <button class="button button-subscribe" type="submit">Подписаться</button>
         </form>
       </section>
       <div class="page-footer-wrapper">
