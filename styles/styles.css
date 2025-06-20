@@ -5,10 +5,12 @@
   --button-basic: #756157;
   --button-additional: #81b3db;
   --buttons-neutral: #f2f2f2;
+  --button-select: #7db54f;
   --background-additional: var(--button-additional);
   --background-substitute: #bbc6cf;
   --background-block: rgba(131, 179, 211, 0.12);
   --text-additional: var(--background);
+  --card-border: #e5e5e5;
 }
 
 *,
@@ -56,13 +58,24 @@ html {
   background-color: var(--background);
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .container {
   width: 1060px;
   margin: 0 auto;
 }
 
 .button {
-  padding: 0;
+  padding: 9px 34px;
   font-family: inherit;
   font-size: 16px;
   line-height: 20px;
@@ -81,6 +94,7 @@ html {
   font-size: 20px;
   line-height: 36px;
   background-color: var(--background-additional);
+  border-radius: 0 4px 4px 0;
 }
 
 .button-search {
@@ -93,8 +107,18 @@ html {
   background-color: var(--background-additional);
 }
 
+.button-more,
+.button-favourites {
+  width: 140px;
+  padding: 8px 18px;
+}
+
 .button-reset {
   background-color: transparent;
+}
+
+.button-selected {
+  background-color: var(--button-select);
 }
 
 .list-reset {
@@ -104,6 +128,7 @@ html {
 }
 
 .title {
+  margin: 0;
   font-size: 30px;
   line-height: 36px;
   font-weight: 700;
@@ -112,6 +137,7 @@ html {
 }
 
 .title-small {
+  margin: 0;
   font-size: 24px;
   line-height: 26px;
   font-weight: 700;
@@ -132,15 +158,23 @@ html {
   margin-right: 30px;
 }
 
+.logo {
+  vertical-align: middle;
+}
+
 .navigation {
   display: flex;
 }
 
 .navigation-list {
+  display: flex;
+  flex-wrap: wrap;
   width: 450px;
 }
 
 .navigation-link {
+  display: block;
+  padding: 20px 16px;
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
@@ -150,8 +184,25 @@ html {
 }
 
 .user-navigation {
+  display: flex;
+  flex-wrap: wrap;
   width: 300px;
   margin-left: auto;
+}
+
+.user-navigation .navigation-link {
+  display: block;
+  min-width: 18px;
+  min-height: 18px;
+}
+
+.user-navigation .navigation-item:last-child {
+  margin-left: auto;
+}
+
+.navigation-item .button {
+  display: block;
+  margin-top: 14px;
 }
 
 .hero {
@@ -178,19 +229,24 @@ html {
 .hero-img {
   display: block;
   margin: 0 auto;
+  padding: 51px 0 82px;
 }
 
 .features {
   width: 1200px;
+  padding-top: 69px;
 }
 
 .features-title {
   width: 51%;
   margin: 0 auto;
+  margin-bottom: 25px;
   text-align: center;
 }
 
 .features-text {
+  margin: 0;
+  margin-bottom: 69px;
   color: var(--text-basic);
   text-align: center;
 }
@@ -202,6 +258,7 @@ html {
 }
 
 .features-item {
+  display: flex;
   text-align: center;
 }
 
@@ -220,21 +277,50 @@ html {
   color: inherit;
 }
 
+.features-item-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  padding: 102px 85px;
+}
+
+.features-item-title {
+  margin-bottom: 62px;
+  text-align: center;
+}
+
+.features-item-description {
+  margin: 0;
+}
+
+.features-item:last-child .features-item-img {
+  order: -1;
+}
+
+.services {
+  padding-top: 64px;
+}
+
 .services-slogan {
   margin: 0 auto;
+  margin-bottom: 20px;
   text-align: center;
 }
 
 .services-text {
+  margin: 0;
+  margin-bottom: 64px;
   text-align: center;
 }
 
 .services-list {
   display: flex;
-  width: 100%;
+  flex-wrap: wrap;
 }
 
 .services-item {
+  width: 400px;
+  padding: 102px 85px;
   text-align: center;
 }
 
@@ -243,18 +329,31 @@ html {
 }
 
 .services-item-title {
+  margin-bottom: 30px;
   color: var(--heading);
 }
 
+.services-item-text {
+  margin: 0;
+}
+
 .search {
+  padding: 96px 0;
   text-align: center;
+}
+
+.search-text {
+  display: block;
+  margin-bottom: 20px;
 }
 
 .search-description {
   margin: 0 auto;
+  margin-bottom: 54px;
 }
 
 .subscribe {
+  padding: 96px 0 104px;
   color: var(--text-additional);
   background-image: url("../images/Subscribe.jpg");
   background-color: var(--background-additional);
@@ -270,6 +369,7 @@ html {
 }
 
 .subscribe-title {
+  margin-bottom: 20px;
   color: var(--text-additional);
 }
 
@@ -277,17 +377,63 @@ html {
   color: var(--heading);
 }
 
+.subscribe-description {
+  width: 475px;
+  margin: 0 auto;
+  margin-bottom: 54px;
+}
+
 .subscribe-inner .button-subscribe {
   background-color: var(--background-additional);
+}
+
+.subscribe-form {
+  width: 685px;
+  margin: 0 auto;
+}
+
+.subscribe-form-wrapper {
+  display: flex;
+  width: 100%;
+}
+
+.subscribe-form-input {
+  flex-grow: 1;
+  padding: 14px 20px;
+  font-family: inherit;
+  font-size: 18px;
+  line-height: 24px;
+  border: none;
+  border-radius: 4px 0 0 4px;
+}
+
+.subscribe-inner .subscribe-form-input {
+  background-color: var(--buttons-neutral);
+}
+
+.subscribe-submit-button {
+  margin-left: auto;
 }
 
 .page-footer-wrapper {
   display: flex;
   justify-content: space-between;
+  padding: 40px 0 30px;
 }
 
 .page-footer-socials {
   width: 190px;
+}
+
+.socials {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 10px;
+}
+
+.socials-item {
+  width: 47px;
+  height: 40px;
 }
 
 .call-us-phone {
@@ -295,6 +441,10 @@ html {
   line-height: 40px;
   color: var(--heading);
   text-decoration: none;
+}
+
+.copyright-link {
+  width: 115px;
 }
 
 .filter-wrapper {
@@ -305,7 +455,13 @@ html {
   background-size: cover;
 }
 
+.header {
+  padding: 35px 0 40px;
+}
+
 .header-title {
+  margin: 0;
+  margin-bottom: 8px;
   font-size: 60px;
   line-height: 78px;
 }
@@ -324,6 +480,10 @@ html {
   text-decoration: none;
 }
 
+.filter {
+  padding-bottom: 73px;
+}
+
 .form {
   display: flex;
   width: 1060px;
@@ -331,26 +491,50 @@ html {
 }
 
 .form-fieldset {
-  width: 150px;
-  margin-right: 70px;
+  width: 160px;
+  margin-right: 60px;
+  padding: 0;
+  border: none;
+}
+
+.form-fieldset:nth-child(2) {
+  margin-right: 120px;
 }
 
 .form-buttons-wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 32px;
+  width: 191px;
   margin-left: auto;
 }
 
 .form-title {
+  margin-bottom: 32px;
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
 }
 
+.form-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
 .form-item label {
+  padding-left: 16px;
   line-height: 23px;
+}
+
+.hotels {
+  padding: 56px 0 60px;
 }
 
 .hotels-sorting-wrapper {
   display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
 }
 
 .hotels-sorting-result {
@@ -359,15 +543,21 @@ html {
 
 .hotels-sorting-select {
   width: 292px;
-  margin-right: 70px;
+  padding: 14px 20px;
   margin-left: auto;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
 }
 
 .hotels-sorting-view {
-  margin-left: auto;
+  margin-left: 70px;
 }
 
 .sorting-view {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
   width: 160px;
 }
 
@@ -375,23 +565,62 @@ html {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+  margin-bottom: 40px;
+  padding-bottom: 40px;
 }
 
 .product-card {
+  display: flex;
+  flex-direction: column;
   width: 340px;
+  padding: 20px;
+  border: 1px solid var(--card-border);
+  border-radius: 4px;
+}
+
+.product-card-img {
+  margin-bottom: 16px;
+  order: -2;
 }
 
 .product-card-title {
+  margin: 0;
+  margin-bottom: 16px;
   font-size: 24px;
   line-height: 28px;
   color: var(--heading);
+  order: -1;
+}
+
+.product-card-table {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  margin-bottom: 16px;
 }
 
 .product-card-table dd {
   text-align: right;
 }
 
+.product-card-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.product-card-rating {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-card-rating svg {
+  align-self: center;
+}
+
 .product-card-rating-text {
+  margin: 0;
+  padding: 8px 23px;
   font-size: 16px;
   line-height: 20px;
   background-color: var(--buttons-neutral);
@@ -408,13 +637,18 @@ html {
 .pagination-item {
   display: none;
   width: 60px;
+  height: 60px;
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: 700;
   color: var(--text-additional);
   background-color: var(--background-additional);
   text-align: center;
+  border-radius: 4px;
 }
 
 .pagination-item-active {
-  display: block;
+  display: flex;
 }
 
 .pagination-item-current {
@@ -428,6 +662,9 @@ html {
 }
 
 .pagination-link {
+  width: 100%;
+  height: 100%;
+  padding: 11px 0;
   color: inherit;
   text-decoration: none;
 }
